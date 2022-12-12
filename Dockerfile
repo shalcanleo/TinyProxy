@@ -1,7 +1,7 @@
 FROM alpine
-LABEL maintainer="Stille <stille@ioiox.com>"
+LABEL maintainer="刺猬 <cuihailiang@gmail.com>"
 
-ENV VERSION 1.11.0
+ENV VERSION 1.0
 
 RUN set -xe && \
     apk add tzdata && \
@@ -9,8 +9,7 @@ RUN set -xe && \
     echo "Asia/Shanghai" > /etc/timezone && \
     apk del tzdata
 
-RUN set -xe \
-    && apk add --no-cache tinyproxy
+RUN set -xe && apk add --no-cache tinyproxy
 
 COPY tinyproxy.conf  /etc/tinyproxy/tinyproxy.conf
 
