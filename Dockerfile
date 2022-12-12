@@ -11,12 +11,7 @@ RUN set -xe && \
 
 RUN set -xe \
     && apk add --no-cache tinyproxy \
-    && sed -i -e '/^Allow /s/^/#/' \
-              -e '/^ConnectPort /s/^/#/' \
-              -e '/^#DisableViaHeader /s/^#//' \
-              -e 's/8888/443/g' \
-              /etc/tinyproxy/tinyproxy.conf
-
+COPY tinyproxy.conf  /etc/tinyproxy/tinyproxy.conf
 
 EXPOSE 443
 
