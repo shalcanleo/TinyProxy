@@ -17,7 +17,7 @@ RUN set -xe \
               -e 's/8888/443/g' \
               /etc/tinyproxy/tinyproxy.conf
 
-VOLUME /etc/tinyproxy
+
 EXPOSE 443
 
 CMD ["tinyproxy", "-d"]
