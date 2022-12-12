@@ -10,7 +10,8 @@ RUN set -xe && \
     apk del tzdata
 
 RUN set -xe \
-    && apk add --no-cache tinyproxy \
+    && apk add --no-cache tinyproxy
+
 COPY tinyproxy.conf  /etc/tinyproxy/tinyproxy.conf
 
 EXPOSE 443
