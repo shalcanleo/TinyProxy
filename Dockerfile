@@ -13,6 +13,6 @@ RUN set -xe && apk add --no-cache tinyproxy
 
 COPY tinyproxy.conf  /etc/tinyproxy/tinyproxy.conf
 
-EXPOSE 443
+EXPOSE 3381
 
 CMD ["tinyproxy", "-d"]
